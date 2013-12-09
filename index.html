@@ -1,0 +1,141 @@
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TITLE: index.html
+AUTHOR: Corbin Combs
+CREATE DATE: 12/9/2013
+PURPOSE: final project-Gary's Greenhous App
+LAST MODIFIED ON: 12/9/2013
+LAST MODIFIED BY: Corbin Combs
+MODIFICATION HISTORY:
+ 	10/16/2013 - Create date.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Gary's Greenhouse</title>
+	<link rel="stylesheet" href="themes/ggApp.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
+	<script src="ggSearch.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body> 
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>Gary's Greenhouse</h1>
+	</div>
+	<div data-role="content">
+		<ul data-role = "listview" data-inset="true">
+			<li><a href = "#search">Plant Search</a></li>
+			<li><a href="#calendar">Calendar</a></li>
+			<li><a href="#images">Images</a></li>
+			<li><a href="#links">Garden Links</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</div>
+</div>
+<div data-role="page" id="search">
+	<div data-role="header">
+		<a href="#home" data-icon="back"  rel="external">Back</a>
+		<h1>Plant Search</h1>
+	</div>
+	<div data-role="content" data-inset="true">
+		<form method="GET">	
+			<div data-role="fieldcontain" class="simpleSearch">
+				<fieldset data-role="controlgroup"  data-type="horizontal" data-role="fieldcontain">
+					<legend>Search:</legend>
+						<input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="on" checked="checked" />
+						<label for="radio-choice-a1">Simple</label>
+						<input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="off"  />
+						<label for="radio-choice-b1">Advanced</label>
+				</fieldset>
+			</div>
+			<div data-role="fieldcontain">
+				<label>Search: </label><input type="text" id="plantName"></br>
+			</div>
+			<div data-role="fieldcontain" class="advancedSearch">
+				<label>Season: </label>
+				<select name="select-choice-7" id="season" data-native-menu="false">
+					<option value="1">Any Season</option>
+					<option value="2">Spring</option>
+					<option value="3">Summer</option>
+					<option value="4">Fall</option>
+				</select>
+			</div>
+			<div data-role="fieldcontain" class="advancedSearch">
+				<label>Sun Amount: </label>
+				<select name="select-choice-7" id="sunAmt" data-native-menu="false">
+					<option value="1">Any Sun</option>
+					<option value="2">Shade</option>
+					<option value="3">Part Shade</option>
+					<option value="4">Part Sun</option>
+					<option value="5">Full Sun</option>
+				</select>
+			</div>
+			
+			
+			<div data-role="fieldcontain">
+				<a href="#results" data-role="button" id="submitButton" rel="external">Search</a>
+			</div>
+			
+		</form>
+	</div>
+</div>
+<div data-role="page" id="results">
+	<div data-role="header">
+		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<h1>Results</h1>
+	</div>
+	<div data-role="content" data-inset="true" id="resultsContent">
+		
+	</div>
+</div>
+<div data-role="page" id="about">
+	<div data-role="header">
+		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<h1>Results</h1>
+	</div>
+	<div data-role="content" data-inset="true" id="resultsContent">
+		
+	</div>
+</div>
+<div data-role="page" id="gardenLinks">
+	<div data-role="header">
+		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<h1>Garden Links</h1>
+	</div>
+	<div data-role="content" data-inset="true" id="resultsContent">
+		
+	</div>
+</div>
+<div data-role="page" id="images">
+	<div data-role="header">
+		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<h1>Images</h1>
+	</div>
+	<div data-role="content" data-inset="true" id="resultsContent">
+		
+	</div>
+</div>
+<div data-role="page" id="calendar">
+	<div data-role="header">
+		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<h1>Calendar</h1>
+	</div>
+	<div data-role="content" data-inset="true" id="resultsContent">
+		
+	</div>
+</div>
+
+
+
+</body>
+
+</html>
