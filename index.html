@@ -19,6 +19,7 @@ MODIFICATION HISTORY:
 	<link rel="stylesheet" href="themes/ggApp.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile.structure-1.4.0-rc.1.min.css" />
+	<link rel="stylesheet" href="ggApp.css" />
 	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.0-rc.1/jquery.mobile-1.4.0-rc.1.min.js"></script>
 	<script src="ggSearch.js"></script>
@@ -43,22 +44,22 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="search">
 	<div data-role="header">
-		<a href="#home" data-icon="back"  rel="external">Back</a>
+		<a href="#home" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
 		<h1>Plant Search</h1>
 	</div>
 	<div data-role="content" data-inset="true">
 		<form method="GET">	
-			<div data-role="fieldcontain" class="simpleSearch">
+			<div data-role="fieldcontain">
 				<fieldset data-role="controlgroup"  data-type="horizontal" data-role="fieldcontain">
-					<legend>Search:</legend>
-						<input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="on" checked="checked" />
+					<legend>Search Type:</legend>
+						<input type="radio" name="radio-choice-a1" id="radio-choice-a1" value="simple" checked="checked" />
 						<label for="radio-choice-a1">Simple</label>
-						<input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="off"  />
+						<input type="radio" name="radio-choice-a1" id="radio-choice-b1" value="advanced"  />
 						<label for="radio-choice-b1">Advanced</label>
 				</fieldset>
 			</div>
 			<div data-role="fieldcontain">
-				<label>Search: </label><input type="text" id="plantName"></br>
+				<label class="simpleSearch">Search: </label><label class="advancedSearch">Plant Name:</label><input type="text" id="plantName"></br>
 			</div>
 			<div data-role="fieldcontain" class="advancedSearch">
 				<label>Season: </label>
@@ -90,7 +91,7 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="results">
 	<div data-role="header">
-		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<a href="#search" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
 		<h1>Results</h1>
 	</div>
 	<div data-role="content" data-inset="true" id="resultsContent">
@@ -99,8 +100,8 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="about">
 	<div data-role="header">
-		<a href="#search" data-icon="back"  rel="external">Back</a>
-		<h1>Results</h1>
+		<a href="#search" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
+		<h1>About</h1>
 	</div>
 	<div data-role="content" data-inset="true" id="resultsContent">
 		
@@ -108,7 +109,7 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="gardenLinks">
 	<div data-role="header">
-		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<a href="#search" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
 		<h1>Garden Links</h1>
 	</div>
 	<div data-role="content" data-inset="true" id="resultsContent">
@@ -117,7 +118,7 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="images">
 	<div data-role="header">
-		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<a href="#search" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
 		<h1>Images</h1>
 	</div>
 	<div data-role="content" data-inset="true" id="resultsContent">
@@ -126,7 +127,7 @@ MODIFICATION HISTORY:
 </div>
 <div data-role="page" id="calendar">
 	<div data-role="header">
-		<a href="#search" data-icon="back"  rel="external">Back</a>
+		<a href="#search" data-icon="back"  rel="external" data-add-back-btn="true">Back</a>
 		<h1>Calendar</h1>
 	</div>
 	<div data-role="content" data-inset="true" id="resultsContent">
