@@ -76,7 +76,7 @@
 
         Otherwise, you can specify specific domains:
     -->
-	<access uri="http://corbincombs.comli.com" subdomains="true">
+	<access uri="http://corbincombs.comli.com/ggApp.php" subdomains="true">
    	</access>
     <access origin="*"/> <!-- allow local pages -->
     <!--
